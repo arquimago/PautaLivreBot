@@ -38,7 +38,7 @@ def messages(bot, update):
     if nome=='Arquimago':
         bot.sendMessage(chat_id=update.message.chat_id, text="Eu discordo do @"+ nome +"!")
 
-message_handler = MessageHandler([Filters.text],messages)
+message_handler = MessageHandler(Filters.text,messages)
 dispatcher.add_handler(message_handler)
 
 updater.start_polling()
